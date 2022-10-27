@@ -13,3 +13,5 @@ createRoot(document.getElementById("root")!).render(
     </Provider>
 );
 
+//the application is an infinite counter in seconds with
+// the possibility of delay and acceleration of the counter
