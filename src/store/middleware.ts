@@ -1,11 +1,12 @@
 import {increment} from "./reducer";
-import {AnyAction} from "@reduxjs/toolkit";
+import {AnyAction, PayloadAction} from "@reduxjs/toolkit";
+import {RootState} from "@reduxjs/toolkit/dist/query/core/apiState";
 
 
-export const timer = ({ dispatch }: { dispatch: any }) => {
+export const timer = ({ dispatch }: { dispatch: Function }) => {
     setInterval(() => dispatch(increment()), 1000);
 
-    return (next: any) => (action: AnyAction) => {
+    return (next: Function) => (action: PayloadAction<number>) => {
         next(action);
     };
 };

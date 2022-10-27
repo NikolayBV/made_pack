@@ -3,10 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import {decrement, increment} from "./store/reducer";
 import {Button} from "@mui/material";
 
+interface StateParam {
+    counter: number;
+}
 
 export const App = () => {
     const dispatch = useDispatch();
-    const counter = useSelector((state: any) => state.counter);// function for getting state value
+    const counter = useSelector((state: StateParam) => state.counter);// function for getting state value
     return (
         <div className='container'>
             <Button variant='text' onClick={() => dispatch(decrement())}>-</Button>
