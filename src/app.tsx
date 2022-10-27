@@ -13,7 +13,7 @@ export const App = () => {
     return (
         <div className='container'>
             <Button variant='text' onClick={() => dispatch(decrement())}>-</Button>
-            {counter}
+            {counter >= 10? 10:counter}
             <Button variant='text' onClick={() => dispatch(increment())}>+</Button>
         </div>
     );
