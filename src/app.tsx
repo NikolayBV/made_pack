@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import {decrement, increment} from "./store/reducer";
 import {Button} from "@mui/material";
 
+
 export const App = () => {
     const dispatch = useDispatch();
-    const counter = useSelector((s: any) => s.counter);
-
+    const counter = useSelector((state: any) => state.counter);
     return (
         <div className='container'>
             <Button variant='text' onClick={() => dispatch(decrement())}>-</Button>
@@ -15,6 +15,8 @@ export const App = () => {
         </div>
     );
 };
+
+
 
 //todo: кнопки (mui comnonents) отобразить по центру;
 //todo: styled compnonents;

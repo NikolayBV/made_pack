@@ -3,9 +3,9 @@ import {root} from "./reducer";
 import {timer} from "./middleware";
 
 
-const s = configureStore({
+const store = configureStore({
     reducer: root,
     middleware: [timer],
 });
 
-export default s;
+export default store;
