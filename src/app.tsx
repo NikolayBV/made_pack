@@ -2,15 +2,14 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {decrement, increment} from "./store/reducer";
 import {Button} from "@mui/material";
+import {StateParam} from "./types/models";
 
-interface StateParam {
-    counter: number;
-}
+
 
 export const App = () => {
     const dispatch = useDispatch();
     const counter = useSelector((state: StateParam) => state.counter);// function for getting state value
-    if(counter === 20) alert('20!');
+
     return (
         <div className='container'>
             <Button variant='text' onClick={() => dispatch(decrement())}>-</Button>
