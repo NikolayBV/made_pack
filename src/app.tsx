@@ -10,10 +10,11 @@ interface StateParam {
 export const App = () => {
     const dispatch = useDispatch();
     const counter = useSelector((state: StateParam) => state.counter);// function for getting state value
+    if(counter === 20) alert('20!');
     return (
         <div className='container'>
             <Button variant='text' onClick={() => dispatch(decrement())}>-</Button>
-            {counter >= 10? 10:counter}
+            {counter}
             <Button variant='text' onClick={() => dispatch(increment())}>+</Button>
         </div>
     );
