@@ -7,5 +7,5 @@ const store = configureStore({
     reducer: root,
     middleware: [timer],
 });
-
+//state creation function
 export default store;

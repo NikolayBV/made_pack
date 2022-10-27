@@ -6,7 +6,7 @@ import {Button} from "@mui/material";
 
 export const App = () => {
     const dispatch = useDispatch();
-    const counter = useSelector((state: any) => state.counter);
+    const counter = useSelector((state: any) => state.counter);// function for getting state value
     return (
         <div className='container'>
             <Button variant='text' onClick={() => dispatch(decrement())}>-</Button>
@@ -14,7 +14,7 @@ export const App = () => {
             <Button variant='text' onClick={() => dispatch(increment())}>+</Button>
         </div>
     );
-};
+}; //main component
 
 
 

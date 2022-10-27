@@ -10,3 +10,4 @@ export const timer = ({ dispatch }: { dispatch: any }) => {
     };
 };
 
+//asynchronous state change function with an interval of 1 second
