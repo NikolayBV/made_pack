@@ -1,10 +1,10 @@
 import {configureStore} from "@reduxjs/toolkit";
-import {root} from "./reducer";
+import counter from "./reducer";
 import {timer} from "./middleware";
 
 
 const store = configureStore({
-    reducer: root,
+    reducer: counter,
     middleware: [timer],
 });
 //state creation function
