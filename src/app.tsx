@@ -5,7 +5,20 @@ import Selector from "./components/selector";
 
 
 
+
 export const App = () => {
+    window.addEventListener('load', async () => {
+        if('serviceWorker' in navigator){
+            try{
+                await navigator.serviceWorker.register('sw.js', {
+                    scope: '../dist'
+                });
+                console.log('SW worked!');
+            } catch (e){
+                console.log('SW Error!');
+            }
+        }
+    })
 
     return (
         <Counter />
