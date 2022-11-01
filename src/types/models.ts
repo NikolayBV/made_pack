@@ -1,3 +1,5 @@
 export interface StateParam {
-    value: number;
+    count: {
+        value: number
+    }
 }

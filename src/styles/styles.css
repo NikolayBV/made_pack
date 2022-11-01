@@ -13,3 +13,7 @@ html, body{
 .container{
     margin: auto;
 }
+.counterForm{
+    display: flex;
+    align-items: center;
+}

@@ -19,11 +19,9 @@ export const counter = createSlice({
             state.value -= 1
         },
         incrementByAmount: (state, action) => {
-            console.log(action.payload)
             state.value += action.payload
         },
         decrementByAmount: (state, action) => {
-            console.log(action.payload)
             state.value -= action.payload
         },
     }
@@ -34,4 +32,4 @@ export const { increment, decrement, incrementByAmount, decrementByAmount } = co
 // export const counter = (state = 0, action: PayloadAction<number>) =>
 //     increment.match(action) ? state + 1: decrement.match(action) ? state - 1 : state;
 // //the function reducer of the state change
-// export const root = combineReducers({ counter });//converting multiple reducers into a single function
+//export const root = combineReducers({ counter });//converting multiple reducers into a single function
